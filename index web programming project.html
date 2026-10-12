@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SportsCare - Injury, Rehabilitation &amp; Return-to-Play System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- LOGIN SCREEN -->
+  <div id="login">
+    <form id="lf" class="lbox">
+      <h1>🏅 SportsCare</h1>
+      <p>Sports Injury, Rehabilitation &amp; Return-to-Play System</p>
+      <label>Role
+        <select id="lr">
+          <option value="admin">Admin</option>
+          <option value="coach">Coach</option>
+          <option value="physio">Physiotherapist</option>
+        </select>
+      </label>
+      <label>Password <input id="lp" type="password" value="demo123" required></label>
+      <button class="btn">Sign in</button>
+      <small id="le" class="err"></small>
+    </form>
+  </div>
+
+  <!-- MAIN APPLICATION -->
+  <div id="app" hidden>
+    <aside id="side">
+      <div class="logo">🏅 SportsCare</div>
+      <nav id="nav"></nav>
+    </aside>
+    <div class="main">
+      <header class="top noprint">
+        <button class="ic" data-a="menu" title="Menu">☰</button>
+        <input id="gs" placeholder="Search athletes and press Enter...">
+        <span class="sp"></span>
+        <button class="ic" data-a="theme" title="Dark / light mode">🌓</button>
+        <button class="ic bell" data-a="bell" title="Notifications">🔔<b id="nb"></b></button>
+        <button class="usr" data-a="go" data-id="settings"><span id="un"></span><em id="ur"></em></button>
+        <button class="ic" data-a="out" title="Sign out">⏻</button>
+      </header>
+      <div id="np" class="pop noprint"></div>
+      <main id="view"></main>
+    </div>
+    <div id="fab" class="noprint">
+      <div id="qa" class="pop"></div>
+      <button class="fb" data-a="qa" title="Quick actions">＋</button>
+    </div>
+  </div>
+
+  <div id="modal"><div class="mbox" id="mb"></div></div>
+  <div id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
